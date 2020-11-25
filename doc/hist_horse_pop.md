@@ -75,17 +75,9 @@ Table 1. Maximum and minimum number of horses for each province between
 
 Below we zoom in and look at the province of Alberta:
 
-<div class="figure">
-
-<img src="hist_horse_pop_files/figure-gfm/plot province-1.png" alt="Figure 2. Horse populations for Alberta between 1940 - 1972." width="50%" />
-
-<p class="caption">
+![](hist_horse_pop_files/figure-gfm/plot%20province-1.png)<!-- -->
 
 Figure 2. Horse populations for Alberta between 1940 - 1972.
-
-</p>
-
-</div>
 
 # References
 

@@ -69,9 +69,9 @@ max_horses %>%
   kable(caption = "Table 1. Maximum and minimum number of horses for each province between 1940 - 1972")
 ```
 
-Below we zoom in and look at the province of Alberta:
+Below we zoom in and look at the province of `r max_horses$Province[1]`:
 
-```{r plot province, fig.width=5, fig.height=4, fig.cap="Figure 2. Horse populations for Alberta between 1940 - 1972.", out.width="50%"}
+```{r plot province, fig.width=5, fig.height=4}
 province_plot <- horse_pop %>% 
   filter(GEO == "Alberta") %>% 
   ggplot(aes(x = Ref_Date, y = Value)) +
@@ -85,5 +85,7 @@ province_plot <- horse_pop %>%
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 province_plot
 ```
+
+Figure 2. Horse populations for `r max_horses$Province[1]` between 1940 - 1972.
 
 # References
