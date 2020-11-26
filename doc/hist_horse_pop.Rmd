@@ -1,6 +1,8 @@
 ---
 title: "Historical horse population in Canada"
 bibliography: references.bib
+params:
+  province: "Alberta"
 output: 
   github_document:
     toc: true
@@ -69,11 +71,11 @@ max_horses %>%
   kable(caption = "Table 1. Maximum and minimum number of horses for each province between 1940 - 1972")
 ```
 
-Below we zoom in and look at the province of `r max_horses$Province[1]`:
+Below we zoom in and look at the province of `r params$province`:
 
 ```{r plot province, fig.width=5, fig.height=4}
 province_plot <- horse_pop %>% 
-  filter(GEO == "Alberta") %>% 
+  filter(GEO == params$province) %>% 
   ggplot(aes(x = Ref_Date, y = Value)) +
   geom_point() +
   geom_line() +
@@ -86,6 +88,6 @@ province_plot <- horse_pop %>%
 province_plot
 ```
 
-Figure 2. Horse populations for `r max_horses$Province[1]` between 1940 - 1972.
+Figure 2. Horse populations for `r params$province` between 1940 - 1972.
 
 # References
